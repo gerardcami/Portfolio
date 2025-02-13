@@ -7,6 +7,8 @@ export const SocialLinks = ({ links, className = "" }) => (
     <ul className="flex items-center justify-start gap-x-4">
       {links.map((link, index) => (
         <li
+          title={link.tooltip}
+          data-tooltip-placement="bottom"
           key={index}
           className="group relative rounded-lg transition duration-200 hover:bg-[#fafafa2f]"
         >

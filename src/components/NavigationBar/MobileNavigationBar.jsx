@@ -24,7 +24,7 @@ export const MobileNavigationBar = () => {
         setMobileMenuOpen(false); // Cerrar el menú si el usuario desliza hacia la derecha
       }
     },
-    [startTouch],
+    [startTouch]
   ); // useCallback asegura que esta función no cambie en cada render
 
   // Usamos el useEffect para agregar los listeners de touch

@@ -1,3 +1,7 @@
+---
+import { Tooltips } from "astro-tooltips";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,6 +11,7 @@
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
     <link rel="stylesheet" href="https://use.typekit.net/add6mjw.css" />
+    <Tooltips interactive={false} delay={[0, 0]} />
   </head>
   <body class="bg-[#161616]">
     <slot />

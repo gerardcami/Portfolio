@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavItem } from "./NavItem";
-import avatar from "/avatar.svg"; // Assuming avatar image
 import { Briefcase, Layers, Mail, User } from "lucide-react";
 
 export const DesktopNavigationBar = () => {
@@ -24,7 +23,7 @@ export const DesktopNavigationBar = () => {
             selectedItem === "#start" ? "scale-105 bg-[#fafafa30]" : ""
           }
         >
-          <img src={avatar} alt="Profile" />
+          <img src="/avatar.svg" alt="Profile" />
         </NavItem>
         <NavItem
           href="#experience"

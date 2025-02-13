@@ -1,4 +1,4 @@
-import Tippy from "@tippyjs/react";
+import { Tooltips } from "astro-tooltips";
 
 export const NavItem = ({ href, tooltip, onClick, children }) => {
   // Check if the children is an <img> element
@@ -31,18 +31,15 @@ export const NavItem = ({ href, tooltip, onClick, children }) => {
   };
 
   return (
-    <Tippy
-      content={tooltip}
-      placement="top"
-      arrow={false}
-      className="hidden lg:block"
+    <li
+      title={tooltip}
+      data-tooltip-placement="top"
+      className={`relative flex aspect-square h-14 transform items-center justify-center overflow-hidden rounded-full border border-[#fafafa19] bg-[#fafafa10] shadow-md transition-transform hover:z-10 hover:scale-110 hover:cursor-pointer hover:bg-[#fafafa20] hover:shadow-xl focus:outline-none ${
+        !isImage ? "p-3" : ""
+      }`}
+      onClick={handleClick} // Attach the click event to the entire li
     >
-      <li
-        className={`relative flex aspect-square h-14 transform items-center justify-center overflow-hidden rounded-full border border-[#fafafa19] bg-[#fafafa10] shadow-md transition-transform hover:z-10 hover:scale-110 hover:cursor-pointer hover:bg-[#fafafa20] hover:shadow-xl focus:outline-none ${!isImage ? "p-3" : ""}`}
-        onClick={handleClick} // Attach the click event to the entire li
-      >
-        <span className="flex items-center justify-center">{children}</span>
-      </li>
-    </Tippy>
+      <span className="flex items-center justify-center">{children}</span>
+    </li>
   );
 };
