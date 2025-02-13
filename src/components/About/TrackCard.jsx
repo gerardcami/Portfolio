@@ -1,57 +1,33 @@
 import { Play } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const CLIENT_ID = "b42fbcc5bc4e47969b5bfc2cfcfa7b1b";
-const CLIENT_SECRET = "a5c664e37f674aec867b28fb890f0930";
+const BACKEND_URL = "https://spotify-api-backend.vercel.app"; // Cambia esto por tu URL real en Vercel
 const PLAYLIST_ID = "41XJfIkkyQDJQSd6kSON8y";
-
-const getAccessToken = async () => {
-  const response = await fetch("https://accounts.spotify.com/api/token", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      Authorization: "Basic " + btoa(`${CLIENT_ID}:${CLIENT_SECRET}`),
-    },
-    body: new URLSearchParams({
-      grant_type: "client_credentials",
-    }),
-  });
-
-  const data = await response.json();
-  return data.access_token;
-};
 
 export const TrackCard = () => {
   const [track, setTrack] = useState(null);
 
   const getRandomTrack = async () => {
-    const token = await getAccessToken();
-    const response = await fetch(
-      `https://api.spotify.com/v1/playlists/${PLAYLIST_ID}/tracks`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      },
-    );
+    try {
+      // Hacemos la solicitud al backend en Vercel
+      const response = await fetch(
+        `${BACKEND_URL}/api/playlist/${PLAYLIST_ID}`
+      );
+      const data = await response.json();
 
-    const data = await response.json();
-    if (data.items && data.items.length > 0) {
-      const randomIndex = Math.floor(Math.random() * data.items.length);
-      const randomTrack = data.items[randomIndex].track;
-      setTrack(randomTrack);
+      if (data.items && data.items.length > 0) {
+        const randomIndex = Math.floor(Math.random() * data.items.length);
+        const randomTrack = data.items[randomIndex].track;
+        setTrack(randomTrack);
+      }
+    } catch (error) {
+      console.error("Error obteniendo la canción:", error);
     }
   };
 
   useEffect(() => {
     getRandomTrack();
-    const interval = setInterval(
-      () => {
-        getRandomTrack();
-      },
-      60 * 60 * 1000,
-    );
-
+    const interval = setInterval(getRandomTrack, 60 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
 
