@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+  strong {
+    color: #2DE1C2;
+  }
+}
+
+@layer utilities {
+  .text-base {
+    font-size: 14px;
+    line-height: 1.50rem;
+  }
+
+  .text-title {
+    font-size: 16px;
+    line-height: 1.50rem;
+  }
+
+  .text-header {
+    font-size: 18px;
+    line-height: 1.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .text-base {
+      font-size: 16px;
+      line-height: 1.75rem;
+    }
+
+    .text-title {
+      font-size: 16px;
+      line-height: 1.75rem;
+    }
+
+    .text-header {
+      font-size: 18px;
+      line-height: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-base {
+      font-size: 18px;
+      line-height: 2rem;
+    }
+
+    .text-title {
+      font-size: 20px;
+      line-height: 2rem;
+    }
+
+    .text-header {
+      font-size: 24px;
+      line-height: 2rem;
+    }
+  }
+}
