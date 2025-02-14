@@ -42,6 +42,30 @@ import { Tooltips } from "astro-tooltips";
 
     <link rel="stylesheet" href="https://use.typekit.net/add6mjw.css" />
     <Tooltips interactive={false} delay={[0, 0]} />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gerard Camí",
+        "url": "https://gerardcami.com",
+        "jobTitle": "Desarrollador Frontend",
+        "knowsAbout": [
+          "React",
+          "JavaScript",
+          "CSS",
+          "UI/UX",
+          "Next.js",
+          "TypeScript"
+        ],
+        "sameAs": [
+          "https://github.com/tu-usuario",
+          "https://linkedin.com/in/tu-perfil",
+          "https://twitter.com/tu-usuario"
+        ]
+      }
+    </script>
   </head>
 
   <body class="bg-[#161616]">
