@@ -1,6 +1,6 @@
 import { Tooltips } from "astro-tooltips";
 
-export const NavItem = ({ href, tooltip, onClick, children }) => {
+export const NavItem = ({ href, tooltip, onClick, children, isMobile }) => {
   // Check if the children is an <img> element
   const isImage = children.type && children.type === "img";
 
@@ -31,15 +31,20 @@ export const NavItem = ({ href, tooltip, onClick, children }) => {
   };
 
   return (
-    <li
-      title={tooltip}
-      data-tooltip-placement="top"
-      className={`relative flex aspect-square h-14 transform items-center justify-center overflow-hidden rounded-full border border-[#fafafa19] bg-[#fafafa10] shadow-md transition-transform hover:z-10 hover:scale-110 hover:cursor-pointer hover:bg-[#fafafa20] hover:shadow-xl focus:outline-none ${
-        !isImage ? "p-3" : ""
-      }`}
-      onClick={handleClick} // Attach the click event to the entire li
-    >
-      <span className="flex items-center justify-center">{children}</span>
+    <li onClick={handleClick} className="list-none">
+      {isMobile ? (
+        <div className="text-xl hover:scale-110 hover:cursor-pointer transform transition-all">
+          <span className="flex items-center justify-center">{children}</span>
+        </div>
+      ) : (
+        <div
+          className={`relative flex lg:aspect-square h-14 transform items-center justify-center overflow-hidden rounded-full border border-[#fafafa19] bg-[#fafafa10] shadow-md transition-transform hover:z-10 hover:scale-110 hover:cursor-pointer hover:bg-[#fafafa20] hover:shadow-xl focus:outline-none ${
+            !isImage ? "p-3" : ""
+          }`}
+        >
+          <span className="flex items-center justify-center">{children}</span>
+        </div>
+      )}
     </li>
   );
 };

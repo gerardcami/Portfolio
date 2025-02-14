@@ -77,26 +77,23 @@ export const MobileNavigationBar = () => {
           <div className="absolute left-0 top-1/2 h-[25%] w-1 -translate-y-1/2 transform cursor-pointer rounded-r-lg bg-[#fafafa]" />
         )}
 
-        <div className="flex h-full flex-col items-center justify-center gap-5 bg-[#1a1a1a] bg-opacity-90 py-10">
+        <div className="flex h-full flex-col items-center justify-center bg-[#1a1a1a] bg-opacity-90 py-10">
           {/* Menu content: centered */}
-          <div className="flex w-full flex-col items-center justify-center gap-5">
-            <NavItem href="#start" tooltip="Inicio">
-              <img
-                src="/avatar.svg" // Use your avatar image here
-                alt="Profile"
-              />
+          <div className="flex w-full flex-col items-center justify-center gap-8">
+            <NavItem href="#start" isMobile={true}>
+              Inicio
             </NavItem>
-            <NavItem href="#experience" tooltip="Experiencia">
-              <Briefcase />
+            <NavItem href="#experience" isMobile={true}>
+              Experiencia
             </NavItem>
-            <NavItem href="#about" tooltip="Sobre mí">
-              <User />
+            <NavItem href="#about" isMobile={true}>
+              Sobre mí
             </NavItem>
-            <NavItem href="#stack" tooltip="Stack">
-              <Layers />
+            <NavItem href="#stack" isMobile={true}>
+              Stack
             </NavItem>
-            <NavItem href="#contact" tooltip="Contacto">
-              <Mail />
+            <NavItem href="#contact" isMobile={true}>
+              Contacto
             </NavItem>
           </div>
 
