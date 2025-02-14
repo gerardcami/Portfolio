@@ -21,14 +21,12 @@ export const About = () => {
           <div className="flex flex-col gap-2 text-pretty md:gap-4">
             {aboutMe.text}
           </div>
-          <picture className="relative w-full aspect-[16/9]">
+          <picture className="relative p-[16%]">
             <img
               src="/img/about/codeimage.svg"
               alt="My Values"
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover opacity-70 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.8),transparent)]"
-              width={720}
-              height={405}
+              className="absolute inset-0 opacity-70 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.5),transparent)]"
             />
           </picture>
         </article>
