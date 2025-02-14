@@ -12,7 +12,7 @@ export const ExperienceItem = ({ experience }) => {
       const viewportHeight = window.innerHeight;
       const progressValue = Math.min(
         1,
-        Math.max(0, (viewportHeight / 2 - top) / (height / 2)),
+        Math.max(0, (viewportHeight / 2 - top) / (height / 2))
       );
 
       setProgress(progressValue);
