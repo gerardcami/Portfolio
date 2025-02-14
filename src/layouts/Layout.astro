@@ -3,16 +3,47 @@ import { Tooltips } from "astro-tooltips";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/avatar.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Gerard Camí - Desarrollador Frontend</title>
+    <meta
+      name="description"
+      content="Desarrollador Frontend especializado en React"
+    />
+    <link rel="canonical" href="https://gerardcami.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Gerard Camí - Desarrollador Frontend" />
+    <meta
+      property="og:description"
+      content="Desarrollador Frontend especializado en React"
+    />
+    <meta property="og:image" content="https://www.gerardcami.com/og.jpg" />
+    <meta property="og:url" content="https://www.gerardcami.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gerard Camí" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gerard Camí - Desarrollador Frontend" />
+    <meta
+      name="twitter:description"
+      content="Desarrollador Frontend especializado en React."
+    />
+    <meta name="twitter:image" content="https://www.gerardcami.com/og.jpg" />
+    <meta name="twitter:url" content="https://www.gerardcami.com" />
+    <meta name="twitter:site" content="@gerardcamig" />
+    <meta name="twitter:creator" content="@gerardcamig" />
+
     <link rel="stylesheet" href="https://use.typekit.net/add6mjw.css" />
     <Tooltips interactive={false} delay={[0, 0]} />
   </head>
+
   <body class="bg-[#161616]">
     <slot />
   </body>
