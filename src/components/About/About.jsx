@@ -1,6 +1,6 @@
 import { aboutMe, education } from "../../data/aboutData";
 import { ImageSelection } from "./ImageSelection";
-import { TimelineEntry } from "../TimelineEntry";
+import { TimelineEntry } from "../TimelineEntry/TimelineEntry";
 import { TrackCard } from "./TrackCard";
 import { GraduationCap, PersonStanding } from "lucide-react";
 import { SectionTitle } from "../SectionTitle";

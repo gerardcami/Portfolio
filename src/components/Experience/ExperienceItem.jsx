@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { TimelineEntry } from "../TimelineEntry";
+import { TimelineEntry } from "../TimelineEntry/TimelineEntry";
 
 export const ExperienceItem = ({ experience }) => {
   const itemRef = useRef(null);

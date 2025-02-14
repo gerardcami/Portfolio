@@ -1,8 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
-import { TimelineHeader } from "./TimelineEntry/TimelineHeader";
-import { TimelineDates } from "./TimelineEntry/TimelineDates";
-import { TimelineDescription } from "./TimelineEntry/TimelineDescription";
-import { TimelineTags } from "./TimelineEntry/TimelineTags";
+import { TimelineHeader } from "./TimelineHeader";
+import { TimelineDescription } from "./TimelineDescription";
+import { TimelineTags } from "./TimelineTags";
 
 export const TimelineEntry = ({ entry, isCard }) => {
   return (
