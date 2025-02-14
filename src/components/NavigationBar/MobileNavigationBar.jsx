@@ -59,7 +59,7 @@ export const MobileNavigationBar = () => {
     <div className="relative">
       {/* Mobile menu toggle button */}
       {!isMobileMenuOpen && (
-        <div className="fixed bottom-4 right-4 z-30 flex items-center justify-center rounded-full border border-[#fafafa19] bg-[#fafafa10] p-4 md:hidden">
+        <div className="fixed bottom-4 right-4 z-30 flex items-center justify-center rounded-full border border-[#fafafa19] bg-[#fafafa10] p-4 lg:hidden">
           <button onClick={toggleMobileMenu}>
             <Menu className="h-8 w-8 text-white" />
           </button>
