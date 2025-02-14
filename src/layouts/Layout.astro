@@ -1,5 +1,6 @@
 ---
 import { Tooltips } from "astro-tooltips";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -70,6 +71,7 @@ import { Tooltips } from "astro-tooltips";
 
   <body class="bg-[#161616]">
     <slot />
+    <Analytics />
   </body>
 </html>
 

@@ -37,12 +37,17 @@ export const NavItem = ({ href, tooltip, onClick, children, isMobile }) => {
           <span className="flex items-center justify-center">{children}</span>
         </div>
       ) : (
-        <div
-          className={`relative flex lg:aspect-square h-14 transform items-center justify-center overflow-hidden rounded-full border border-[#fafafa19] bg-[#fafafa10] shadow-md transition-transform hover:z-10 hover:scale-110 hover:cursor-pointer hover:bg-[#fafafa20] hover:shadow-xl focus:outline-none ${
-            !isImage ? "p-3" : ""
-          }`}
-        >
-          <span className="flex items-center justify-center">{children}</span>
+        <div className="relative group">
+          <div
+            className={`relative flex lg:aspect-square h-14 transform items-center justify-center overflow-hidden rounded-full border border-[#fafafa19] bg-[#fafafa10] shadow-md transition-transform hover:z-10 hover:scale-110 hover:cursor-pointer hover:bg-[#fafafa20] hover:shadow-xl focus:outline-none ${
+              !isImage ? "p-3" : ""
+            }`}
+          >
+            <span className="flex items-center justify-center">{children}</span>
+          </div>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden whitespace-nowrap rounded bg-black px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:block group-hover:opacity-100">
+            {tooltip}
+          </div>
         </div>
       )}
     </li>
