@@ -10,7 +10,7 @@ export const Profile = () => (
         <div className="w-[80px] rounded-full bg-zinc-100 object-cover p-0.5 md:w-[200px] dark:bg-zinc-800">
           <img
             className="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
-            src="/avatar.svg"
+            src="/favicon.svg"
             alt="Gerard Camí's Avatar"
           />
         </div>
