@@ -23,7 +23,7 @@ export const DesktopNavigationBar = () => {
             selectedItem === "#start" ? "scale-105 bg-[#fafafa30]" : ""
           }
         >
-          <img src="/avatar.svg" alt="Profile" />
+          <img src="/favicon.svg" alt="Profile" />
         </NavItem>
         <NavItem
           href="#experience"
