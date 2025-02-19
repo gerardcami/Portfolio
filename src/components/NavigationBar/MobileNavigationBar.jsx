@@ -68,7 +68,7 @@ export const MobileNavigationBar = () => {
 
       {/* Mobile menu content */}
       <div
-        className={`fixed left-0 top-0 z-20 h-full w-full transform bg-black bg-opacity-50 transition-transform md:hidden ${
+        className={`fixed left-0 top-0 z-20 h-full w-full transform bg-black bg-opacity-50 transition-transform lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
