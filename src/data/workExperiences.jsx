@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: "Desarrollador Full Stack",
     entity: "ServiceNext Automotive Technology",
-    entityLink: "https://www.servicenext.es", // Enlace ficticio, reemplaza por el real si es necesario
+    entityLink: "https://www.servicenext.eu",
     description: (
       <>
         <p>
